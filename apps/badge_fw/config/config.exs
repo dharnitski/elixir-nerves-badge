@@ -6,9 +6,19 @@
 use Mix.Config
 
 config :badge_fw, :wlan0,
-  ssid: "Nerves",
+  ssid: "ElixirConf",
+  #ssid: "Nerves",
   key_mgmt: :"WPA-PSK",
-  psk: "nervesnet"
+  #psk: "nervesnet"
+  psk: "elixir2016"
+
+config :nerves_ntp, :ntpd, "/usr/sbin/ntpd"
+config :nerves_ntp, :servers, [
+    "0.pool.ntp.org",
+    "1.pool.ntp.org",
+    "2.pool.ntp.org",
+    "3.pool.ntp.org"
+]
 
 # Import target specific config. This must remain at the bottom
 # of this file so it overrides the configuration defined above.
