@@ -5,6 +5,11 @@
 # is restricted to this project.
 use Mix.Config
 
+config :badge_fw, :wlan0,
+  ssid: "Nerves",
+  key_mgmt: :"WPA-PSK",
+  psk: "nervesnet"
+
 # Import target specific config. This must remain at the bottom
 # of this file so it overrides the configuration defined above.
 # Uncomment to use target specific configurations
