@@ -20,6 +20,8 @@ config :nerves_ntp, :servers, [
     "3.pool.ntp.org"
 ]
 
+config :logger, level: :error
+
 # Import target specific config. This must remain at the bottom
 # of this file so it overrides the configuration defined above.
 # Uncomment to use target specific configurations
