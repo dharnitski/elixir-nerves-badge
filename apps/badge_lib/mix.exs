@@ -13,8 +13,9 @@ defmodule BadgeLib.Mixfile do
   # Configuration for the OTP application
   #
   # Type "mix help compile.app" for more information
+
   def application do
-    [applications: [:logger]]
+    [applications: [:logger, :firmata]]
   end
 
   # Dependencies can be Hex packages:
@@ -27,6 +28,7 @@ defmodule BadgeLib.Mixfile do
   #
   # Type "mix help deps" for more examples and options
   defp deps do
-    []
+    [{:firmata, github: "mobileoverlord/firmata"}]
   end
+
 end
