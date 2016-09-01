@@ -16,19 +16,17 @@ defmodule BadgeFw.Mixfile do
      deps: deps ++ system(@target)]
   end
 
-  # Configuration for the OTP application.
-  #
-  # Type `mix help compile.app` for more information.
 def application do
   [mod: {BadgeFw, []},
-   applications: [:logger, :badge_lib,
-                  :nerves_interim_wifi, :nerves_ntp]]
+  applications: [:logger, :badge_lib, :nerves_interim_wifi, :nerves_ntp, :badge_settings]]
 end
+
 def deps do
   [{:nerves, "~> 0.3.0"},
-   {:nerves_interim_wifi, "~> 0.1"},
-   {:nerves_ntp, "~> 0.1"},
-   {:badge_lib, in_umbrella: true}]
+  {:nerves_interim_wifi, "~> 0.1"},
+  {:nerves_ntp, "~> 0.1"},
+  {:badge_lib, in_umbrella: true},
+  {:badge_settings, in_umbrella: true}]
 end
 
   def system(target) do
@@ -41,4 +39,4 @@ end
   end
 
 end
-:inet.gethostbyname 'nerves-project.org'
+#:inet.gethostbyname 'nerves-project.org'

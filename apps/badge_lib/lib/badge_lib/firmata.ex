@@ -95,3 +95,6 @@ defmodule BadgeLib.Firmata do
   end
 
 end
+
+#BadgeLib.Firmata.vibrate_pulse
+#BadgeLib.Firmata.text "some text"
